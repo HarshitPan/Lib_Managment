@@ -48,4 +48,44 @@ class Books
             System.out.println();
         }
     }
+    public static void main(String args[])
+    {
+        Books obj=new Books();
+        while(true)
+        {
+            System.out.println("** Main-Menu ****");
+            System.out.println("1. Issue");
+            System.out.println("2. Return");
+            System.out.println("3.Display Details");
+            System.out.println("4. Exit");
+            System.out.print("Enter your choice -> ");
+            int choice=obj.sc.nextInt();
+            switch(choice)
+            {
+                case 1:
+                    System.out.print("Enter id of book to issue -:");
+                    obj.issue_book(obj.sc.nextInt());
+                    break;
+                case 2:
+                    System.out.print("Enter id of book to return -:");
+                    obj.issue_book(obj.sc.nextInt());
+                    break;
+                case 3:
+                    obj.display();
+                    break;
+                case 4:
+                    return;
+                default:
+                    System.out.println("Invalud Choice...");
+                    System.out.println("Try Again...");
+
+            }
+            System.out.println();
+            System.out.println("Enter to continue...");
+            obj.sc.nextLine();
+            System.out.println("**************");
+            System.out.println();
+        }
+    }
+    
 }
