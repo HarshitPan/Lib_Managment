@@ -35,8 +35,8 @@ class Books
         System.out.println();
         System.out.println("Value Inputted...");
         System.out.print("Press Enter to continue...");
-        obj.sc.nextLine();
-        obj.sc.nextLine();
+        sc.nextLine();
+        sc.nextLine();
     }
     void display()
     {
