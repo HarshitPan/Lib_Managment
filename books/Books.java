@@ -48,4 +48,17 @@ class Books
             System.out.println();
         }
     }
+    void return_book(int id)
+    {
+        for(int i=0;i<total_books;i++)
+        {
+            if(book_id==id) 
+            {
+                    no_of_books[i]++;
+                    System.out.println("Book Returned.");
+                    return;
+            }
+        }
+        System.out.println("Wrong ID...");
+    }
 }
