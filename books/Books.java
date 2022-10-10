@@ -48,11 +48,12 @@ class Books
             System.out.println();
         }
     }
-    void issue_book(int id)
+void issue_book(int id)
     {
+        System.out.println();
         for(int i=0;i<total_books;i++)
         {
-            if(book_id==id) 
+            if(book_id[i]==id) 
             {
                 if(no_of_books[i]!=0)
                 {
@@ -65,5 +66,19 @@ class Books
             }
         }
         System.out.println("Book Not avaiable in Library.");
+    }
+    void return_book(int id)
+    {
+        System.out.println();
+        for(int i=0;i<total_books;i++)
+        {
+            if(book_id[i]==id) 
+            {
+                    no_of_books[i]++;
+                    System.out.println("Book Returned.");
+                    return;
+            }
+        }
+        System.out.println("Wrong ID...");
     }
 }
