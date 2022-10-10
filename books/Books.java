@@ -1,4 +1,3 @@
-package books;
 import java.util.Scanner;
 class Books
 {
@@ -12,6 +11,9 @@ class Books
         System.out.println("Input Some Books...");
         System.out.print("Enter Total no of books ->");
         total_books=sc.nextInt();
+        book_name=new String[total_books];
+        book_id=new int[total_books];
+        no_of_books=new int[total_books];
         input();
     }
     void input()
@@ -20,12 +22,13 @@ class Books
         {
             System.out.println();
             System.out.println("Enter details of "+(i+1)+" book -:");
-            System.out.println("Enter Book ID -:");
+            System.out.print("Enter Book ID -:");
             book_id[i]=sc.nextInt();
-            System.out.println("Enter Book Name -:");
+            sc.nextLine();
+            System.out.print("Enter Book Name -:");
             book_name[i]=sc.nextLine();
-            System.out.println("Enter total no of books -:");
-            no_of_books=sc.nextInt();
+            System.out.print("Enter total no of books -:");
+            no_of_books[i]=sc.nextInt();
         }
         System.out.println();
         System.out.println("**************");
@@ -40,6 +43,9 @@ class Books
             System.out.println("Book Id -> "+ book_id[i]);
             System.out.println("Book Name -> "+ book_name[i]);
             System.out.println("Books Available -> "+no_of_books[i]);
+            System.out.println();
+            System.out.println("****************");
+            System.out.println();
         }
     }
 }
