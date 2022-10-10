@@ -48,6 +48,24 @@ class Books
             System.out.println();
         }
     }
+     void issue_book(int id)
+    {
+        for(int i=0;i<total_books;i++)
+        {
+            if(book_id==id) 
+            {
+                if(no_of_books[i]!=0)
+                {
+                    no_of_books[i]--;
+                    System.out.println("Book Issued.");
+                    return;
+                }
+                System.out.println("No copy available...");
+                return;
+            }
+        }
+        System.out.println("Book Not avaiable in Library.");
+    }
     public static void main(String args[])
     {
         Books obj=new Books();
@@ -88,4 +106,7 @@ class Books
         }
     }
     
+
+   
+
 }
